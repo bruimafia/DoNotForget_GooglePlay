@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="view"
+            type="ru.bruimafia.donotforget.dialog.sync.SyncDialog" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp"
+        tools:context=".dialog.sync.SyncDialog">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_no_auth"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="@{view.isLogin ? View.GONE : View.VISIBLE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tv_about_sync"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="@{view.isLogin ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:gravity="center"
+            android:text="@string/tv_last_sync"
+            android:textSize="@dimen/_12sdp"
+            android:visibility="@{view.isLogin ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="italic"
+            android:visibility="@{view.isLogin ? View.VISIBLE : View.GONE}"
+            app:setLastSync="@{view.lastSync}"
+            tools:text="5645845768" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:onClick="@{v -> view.onSignIn()}"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/btn_sign_in"
+            android:visibility="@{view.isLogin ? View.GONE : View.VISIBLE}" />
+
+        <com.dd.processbutton.iml.ActionProcessButton
+            android:id="@+id/progress"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="@{v -> view.onSync()}"
+            android:padding="@dimen/_15sdp"
+            android:text="@string/btn_sync"
+            android:visibility="@{view.isLogin ? View.VISIBLE : View.GONE}"
+            app:pb_colorComplete="?attr/colorPrimary"
+            app:pb_colorError="@color/red_200"
+            app:pb_colorNormal="?attr/colorPrimary"
+            app:pb_colorPressed="@color/colorBlackout"
+            app:pb_colorProgress="?attr/colorPrimary"
+            app:pb_textComplete="@string/btn_sync_complete"
+            app:pb_textError="@string/btn_sync_error"
+            app:pb_textProgress="@string/btn_sync_progress" />
+
+    </LinearLayout>
+
+</layout>

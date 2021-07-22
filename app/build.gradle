@@ -1,0 +1,111 @@
+plugins {
+    id 'com.android.application'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.google.gms.google-services' // Google Services plugin
+apply plugin: 'com.google.firebase.crashlytics' // Crashlytics Gradle plugin
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "ru.bruimafia.donotforget"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 18
+        versionName "1.0.3"
+
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        setProperty("archivesBaseName", "do_not_forget-$versionName-code$versionCode")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding true
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    // AppMetrica SDK
+    implementation 'com.yandex.android:mobmetricalib:3.21.1'
+    implementation 'com.android.installreferrer:installreferrer:2.2' // Опционально. Библиотека Play Install Referrer
+
+    // OneSignal SDK
+    implementation 'com.onesignal:OneSignal:4.4.1'
+
+    // Календарь и часы
+    implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
+
+    // Окно выбора цвета
+    implementation 'me.jfenn.ColorPickerDialog:base:0.2.1'
+
+    // SmoothProgressBar
+    implementation 'com.github.castorflex.smoothprogressbar:library:1.1.0'
+
+    // Кнопка с прогресс-баром
+    implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
+
+    // SDP - a scalable size unit / аналог папок dimens
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // RxJava2
+    implementation "io.reactivex.rxjava2:rxjava:2.2.21"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    // Android Jetpack: LifeCycle and ViewModel
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.3.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.3.1'
+
+    // Android Jetpack: Navigation Component
+    implementation "androidx.navigation:navigation-fragment:2.3.5"
+    implementation "androidx.navigation:navigation-ui:2.3.5"
+
+    // Android Jetpack: Room Database
+    implementation 'androidx.room:room-runtime:2.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+    implementation 'androidx.room:room-rxjava2:2.3.0' // optional - RxJava2 support for Room
+//    implementation 'androidx.room:room-rxjava3:2.3.0' // optional - RxJava3 support for Room
+
+    // Android Jetpack: WorkManager
+    implementation "androidx.work:work-runtime:2.7.0-alpha04" // (Java only)
+//    implementation "androidx.work:work-rxjava2:2.6.0-beta01" // optional - RxJava2 support
+    implementation 'androidx.work:work-gcm:2.7.0-alpha04' // optional - GCMNetworkManager support
+
+    // In-App purchase. Внутриигровые покупки
+    implementation 'com.anjlab.android.iab.v3:library:1.1.0'
+
+    // Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:28.2.1')
+    implementation 'com.google.firebase:firebase-firestore' // Firebase FireStore
+    implementation 'com.google.firebase:firebase-messaging' // Firebase Cloud Messaging
+    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-ads' // Firebase AdMob Google Mobile Ads SDK
+    implementation 'com.google.firebase:firebase-ads:20.2.0' // Firebase SDK
+    implementation 'com.google.firebase:firebase-core:19.0.0' // Firebase SDK
+    implementation 'com.google.firebase:firebase-analytics' // Firebase Google Analytics
+    implementation 'com.google.firebase:firebase-crashlytics:18.1.0' // Firebase Crashlytics
+}
