@@ -19,7 +19,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DoNotForget.Launcher">
 
-        <receiver android:name=".background_work.broadcast_receiver.Receiver">
+        <receiver android:name=".background_work.broadcast_receiver.Receiver"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
@@ -27,7 +28,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".SingleActivity">
+        <activity android:name=".SingleActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

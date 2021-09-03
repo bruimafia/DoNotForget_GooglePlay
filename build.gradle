@@ -6,11 +6,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath 'com.android.tools.build:gradle:7.0.2'
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
-        classpath 'com.google.gms:google-services:4.3.8' // Google Services plugin
+        classpath 'com.google.gms:google-services:4.3.10' // Google Services plugin
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1' // Crashlytics Gradle plugin
-        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.12.5' // OneSignal Gradle Plugin
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4' // OneSignal Gradle Plugin
     }
 }
 

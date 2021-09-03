@@ -8,15 +8,15 @@ apply plugin: 'com.google.gms.google-services' // Google Services plugin
 apply plugin: 'com.google.firebase.crashlytics' // Crashlytics Gradle plugin
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "ru.bruimafia.donotforget"
         minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 18
-        versionName "1.0.3"
+        targetSdkVersion 31
+        versionCode 19
+        versionName "1.0.4"
 
         vectorDrawables.useSupportLibrary = true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -42,9 +42,9 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.appcompat:appcompat:1.3.0'
+    implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -54,7 +54,7 @@ dependencies {
     implementation 'com.android.installreferrer:installreferrer:2.2' // Опционально. Библиотека Play Install Referrer
 
     // OneSignal SDK
-    implementation 'com.onesignal:OneSignal:4.4.1'
+    implementation 'com.onesignal:OneSignal:4.5.1'
 
     // Календарь и часы
     implementation 'com.jzxiang.pickerview:TimePickerDialog:1.0.1'
@@ -90,9 +90,9 @@ dependencies {
 //    implementation 'androidx.room:room-rxjava3:2.3.0' // optional - RxJava3 support for Room
 
     // Android Jetpack: WorkManager
-    implementation "androidx.work:work-runtime:2.7.0-alpha04" // (Java only)
+    implementation "androidx.work:work-runtime:2.7.0-beta01" // (Java only)
 //    implementation "androidx.work:work-rxjava2:2.6.0-beta01" // optional - RxJava2 support
-    implementation 'androidx.work:work-gcm:2.7.0-alpha04' // optional - GCMNetworkManager support
+    implementation 'androidx.work:work-gcm:2.7.0-beta01' // optional - GCMNetworkManager support
 
     // In-App purchase. Внутриигровые покупки
     implementation 'com.anjlab.android.iab.v3:library:1.1.0'
@@ -102,10 +102,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore' // Firebase FireStore
     implementation 'com.google.firebase:firebase-messaging' // Firebase Cloud Messaging
     implementation 'com.google.firebase:firebase-auth'
-    implementation 'com.google.android.gms:play-services-auth:19.0.0'
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
     implementation 'com.google.android.gms:play-services-ads' // Firebase AdMob Google Mobile Ads SDK
-    implementation 'com.google.firebase:firebase-ads:20.2.0' // Firebase SDK
-    implementation 'com.google.firebase:firebase-core:19.0.0' // Firebase SDK
+    implementation 'com.google.firebase:firebase-ads:20.3.0' // Firebase SDK
+    implementation 'com.google.firebase:firebase-core:19.0.1' // Firebase SDK
     implementation 'com.google.firebase:firebase-analytics' // Firebase Google Analytics
-    implementation 'com.google.firebase:firebase-crashlytics:18.1.0' // Firebase Crashlytics
+    implementation 'com.google.firebase:firebase-crashlytics:18.2.1' // Firebase Crashlytics
 }
