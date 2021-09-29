@@ -7,7 +7,7 @@
 
 «Do not forget» – as often do we tell ourselves this phrase in the hope of remembering something important at the right time. And as often do we still forget about it. Now you can be calm – we will definitely remind you about everything.
 
-<img src="/design/screenshots_ru/1_framed копия.png" width="200"><img src="/design/screenshots_ru/2_framed копия.png" width="200">
-<img src="/design/screenshots_ru/3_framed копия.png" width="200"><img src="/design/screenshots_ru/4_framed копия.png" width="200">
-<img src="/design/screenshots_ru/5_framed копия.png" width="200"><img src="/design/screenshots_ru/6_framed копия.png" width="200">
-<img src="/design/screenshots_ru/7_framed копия.png" width="200"><img src="/design/screenshots_ru/8_framed копия.png" width="200">
+<img src="/design/screenshots_ru/1_framed копия.png" width="200"> <img src="/design/screenshots_ru/2_framed копия.png" width="200">
+<img src="/design/screenshots_ru/3_framed копия.png" width="200"> <img src="/design/screenshots_ru/4_framed копия.png" width="200">
+<img src="/design/screenshots_ru/5_framed копия.png" width="200"> <img src="/design/screenshots_ru/6_framed копия.png" width="200">
+<img src="/design/screenshots_ru/7_framed копия.png" width="200"> <img src="/design/screenshots_ru/8_framed копия.png" width="200">
