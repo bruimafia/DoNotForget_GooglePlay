@@ -44,6 +44,7 @@
     <string name="tv_about_sync">Время от времени Ваш аккаунт будет синхронизироваться автоматически. Однако Вы можете сделать это сами в любое время.</string>
     <string name="tv_last_sync">Последняя синхронизация:</string>
     <string name="tv_no_sync">отсутствует</string>
+    <string name="tv_privacy_policy">Политика конфиденциальности</string>
 
     <string name="btn_color_choose">Выбрать цвет фона</string>
     <string name="btn_sign_in">Войти через Google</string>

@@ -1,5 +1,6 @@
 package ru.bruimafia.donotforget.repository.local_store;
 
+import androidx.annotation.Keep;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.room.ColumnInfo;
@@ -12,6 +13,7 @@ import java.util.Objects;
 import ru.bruimafia.donotforget.BR;
 
 @Entity(tableName = "notes")
+@Keep
 public class Note extends BaseObservable {
 
     @PrimaryKey(autoGenerate = true)

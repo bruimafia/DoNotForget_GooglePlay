@@ -104,7 +104,12 @@ public class CheckNotificationsWorker extends Worker {
 
     private void createNotificationWithAlarmManager(Note note) {
         Intent intent = new Intent(App.getInstance(), Receiver.class).setAction(Constants.ACTION_CREATE_OR_UPDATE).putExtra("test_id", note.getId());
-        PendingIntent penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        PendingIntent penIntent;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S)
+            penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_IMMUTABLE);
+        else
+            penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         if (penIntent != null) {
             AlarmManager manager = (AlarmManager) App.getInstance().getSystemService(Context.ALARM_SERVICE);
@@ -115,7 +120,12 @@ public class CheckNotificationsWorker extends Worker {
 
     private void deleteNotificationWithAlarmManager(Note note) {
         Intent intent = new Intent(App.getInstance(), Receiver.class).setAction(Constants.ACTION_CREATE_OR_UPDATE).putExtra("test_id", note.getId());
-        PendingIntent penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        PendingIntent penIntent;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.S)
+            penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_IMMUTABLE);
+        else
+            penIntent = PendingIntent.getBroadcast(App.getInstance(), (int) note.getId(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         if (penIntent != null) {
             AlarmManager manager = (AlarmManager) App.getInstance().getSystemService(Context.ALARM_SERVICE);

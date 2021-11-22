@@ -31,7 +31,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.anjlab.android.iab.v3.BillingProcessor;
-import com.anjlab.android.iab.v3.TransactionDetails;
+import com.anjlab.android.iab.v3.PurchaseInfo;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
@@ -223,12 +223,6 @@ public class TasksFragment extends Fragment implements OnClickOptionsMenu, Billi
         dialog.show();
     }
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (!bp.handleActivityResult(requestCode, resultCode, data))
-            super.onActivityResult(requestCode, resultCode, data);
-    }
-
     private void showFirstLaunch() {
         if (SharedPreferencesManager.getInstance(App.getInstance()).isFirstLaunch()) {
             Dialog dialog = new Dialog(binding.getRoot().getContext());
@@ -267,7 +261,7 @@ public class TasksFragment extends Fragment implements OnClickOptionsMenu, Billi
     }
 
     @Override
-    public void onProductPurchased(String productId, TransactionDetails details) {
+    public void onProductPurchased(String productId, PurchaseInfo details) {
         Snackbar.make(binding.getRoot(), getString(R.string.snackbar_reset_app), BaseTransientBottomBar.LENGTH_LONG).show();
         SharedPreferencesManager.getInstance(App.getInstance()).setFullVersion(true);
         viewModel.isFullVersion.set(true);

@@ -43,6 +43,7 @@ public class App extends Application {
         OneSignal.setAppId(getString(R.string.oneSignal_app_id));
     }
 
+
     public static App getInstance() {
         return instance;
     }

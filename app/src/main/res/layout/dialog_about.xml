@@ -71,6 +71,15 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_privacyPolicyLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="@{v -> view.onPrivacyPolicyLink()}"
+            android:text="@string/tv_privacy_policy"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"

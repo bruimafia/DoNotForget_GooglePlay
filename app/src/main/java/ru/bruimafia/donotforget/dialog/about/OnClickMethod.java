@@ -4,4 +4,6 @@ public interface OnClickMethod {
     void onVkLink();
 
     void onGoogleplayLink();
+
+    void onPrivacyPolicyLink();
 }

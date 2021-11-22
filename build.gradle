@@ -5,11 +5,12 @@ buildscript {
         gradlePluginPortal()
         jcenter()
     }
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5' // Safe Args Android Navigation Component plugin
         classpath 'com.google.gms:google-services:4.3.10' // Google Services plugin
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.7.1' // Crashlytics Gradle plugin
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.8.0' // Crashlytics Gradle plugin
         classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:0.13.4' // OneSignal Gradle Plugin
     }
 }

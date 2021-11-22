@@ -50,4 +50,9 @@ public class AboutDialog extends DialogFragment implements OnClickMethod {
             startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID)));
         }
     }
+
+    @Override
+    public void onPrivacyPolicyLink() {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.privacy_policy_link))));
+    }
 }
