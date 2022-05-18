@@ -6,6 +6,7 @@ plugins {
     id 'com.google.firebase.crashlytics' // Crashlytics Gradle plugin
 }
 
+
 android {
     compileSdkVersion 32
     buildToolsVersion "31.0.0"
